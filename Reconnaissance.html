@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>Mark Zuckerberg</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">0</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">0</td></tr>
+<tr><td>contacts</td><td class="centered">5</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">12</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-contacts" href="javascript:showhide('contacts');"><p>[+] Contacts</p></a>
+<a id="hide-contacts" href="javascript:showhide('contacts');"><p>[-] Contacts</p><hr></a>
+<table name="table" id="contacts">
+<tr><th>first_name</th><th>middle_name</th><th>last_name</th><th>email</th><th>title</th><th>region</th><th>country</th><th>module</th></tr>
+<tr><td></td><td></td><td>Operations</td><td>domain@facebook.com</td><td>Whois contact</td><td>Menlo Park, CA</td><td>United States</td><td>whois_pocs</td></tr>
+<tr><td>Brandon</td><td></td><td>Stout</td><td>bstout@facebook.com</td><td>Whois contact</td><td>Chicago, IL</td><td>United States</td><td>whois_pocs</td></tr>
+<tr><td>Darrell</td><td></td><td>Wayne</td><td>tiffany.cameron.507@facebook.com</td><td>Whois contact</td><td>Flowermound, TX</td><td>United States</td><td>whois_pocs</td></tr>
+<tr><td>Lea</td><td></td><td>Neteork ops</td><td>leigha311@facebook.com</td><td>Whois contact</td><td>Dalton, GA</td><td>United States</td><td>whois_pocs</td></tr>
+<tr><td>Mark</td><td></td><td>Zuckerberg</td><td>zuck@thefacebook.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td>whois_pocs</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-profiles" href="javascript:showhide('profiles');"><p>[+] Profiles</p></a>
+<a id="hide-profiles" href="javascript:showhide('profiles');"><p>[-] Profiles</p><hr></a>
+<table name="table" id="profiles">
+<tr><th>username</th><th>resource</th><th>url</th><th>category</th><th>notes</th><th>module</th></tr>
+<tr><td>MarkZuckerberg</td><td>Behance</td><td>https://www.behance.net/MarkZuckerberg</td><td>business</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>authorSTREAM</td><td>http://www.authorstream.com/MarkZuckerberg/</td><td>presos</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>about.me</td><td>https://about.me/MarkZuckerberg</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>Blogspot</td><td>http://MarkZuckerberg.blogspot.com</td><td>blog</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>BodyBuilding.com</td><td>http://api.bodybuilding.com/api-proxy/bbc/get?slug=MarkZuckerberg</td><td>health</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>Bitbucket</td><td>https://bitbucket.org/MarkZuckerberg/</td><td>coding</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>BLIP.fm</td><td>https://blip.fm/MarkZuckerberg</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>BuzzFeed</td><td>https://www.buzzfeed.com/MarkZuckerberg</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>Chess.com</td><td>https://www.chess.com/member/MarkZuckerberg</td><td>gaming</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>Codepen</td><td>https://codepen.io/MarkZuckerberg</td><td>tech</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>diigo</td><td>https://www.diigo.com/interact_api/load_profile_info?name=MarkZuckerberg</td><td>images</td><td></td><td>profiler</td></tr>
+<tr><td>MarkZuckerberg</td><td>devRant</td><td>https://devrant.com/users/MarkZuckerberg</td><td>social</td><td></td><td>profiler</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: Bill Kotut<br />Tue, Jul 21 2020 15:22:50</p>
+    </div>
+</body>
+</html>

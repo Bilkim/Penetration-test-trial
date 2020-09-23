@@ -1,0 +1,27 @@
+HTTrack3.49-2 launched on Mon, 20 Jul 2020 20:09:39 at www.certifiedhacker.com +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w www.certifiedhacker.com -O "/home/bill/websites/webTracker" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:11:36	Error: 	"Not Found" (404) at link www.certifiedhacker.com/sample-login.html (from www.certifiedhacker.com/)
+20:11:38	Error: 	"Forbidden" (403) at link para.llel.us/favicon.ico (from www.certifiedhacker.com/)
+20:13:11	Error: 	Exit requested by shell or user
+20:13:12	Warning: 	File not added due to mirror cancel: www.certifiedhacker.com/images/footerBg-top.png
+20:13:12	Warning: 	File not added due to mirror cancel: www.certifiedhacker.com/sample-login.html
+20:13:12	Error: 	"mirror stopped by user" (-1) at link www.certifiedhacker.com/sample-login.html (from www.certifiedhacker.com/)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/bl.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/tl.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/tr.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/br.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/rarrowleft.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/rarrowright.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/rarrowdown.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Error: 	"Not Found" (404) at link www.certifiedhacker.com/css/images/rarrowup.gif (from www.certifiedhacker.com/css/tooltip.min.css)
+20:13:12	Warning: 	File not added due to mirror cancel: www.certifiedhacker.com/images/footerBg-top.png
+20:13:12	Error: 	"mirror stopped by user" (-1) at link www.certifiedhacker.com/images/footerBg-top.png (from www.certifiedhacker.com/css/default.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 33 seconds : 107 links scanned, 95 files written (2413632 bytes overall) [2458423 bytes received at 11541 bytes/sec], 19794 bytes transferred using HTTP compression in 3 files, ratio 34%, 5.8 requests per connection
+(13 errors, 3 warnings, 0 messages)

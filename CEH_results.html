@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>Microsoft Networks</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">1</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">92</td></tr>
+<tr><td>contacts</td><td class="centered">0</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">0</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-domains" href="javascript:showhide('domains');"><p>[+] Domains</p></a>
+<a id="hide-domains" href="javascript:showhide('domains');"><p>[-] Domains</p><hr></a>
+<table name="table" id="domains">
+<tr><th>domain</th><th>module</th></tr>
+<tr><td>microsoft.com</td><td>user_defined</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts">
+<tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>module</th></tr>
+<tr><td>3rdpartysource.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>a104-121-246-117.deploy.static.akamaitechnologies.com</td><td>104.121.246.117</td><td></td><td></td><td></td><td></td><td>reverse_resolve</td></tr>
+<tr><td>a104-127-120-229.deploy.static.akamaitechnologies.com</td><td>104.127.120.229</td><td></td><td></td><td></td><td></td><td>reverse_resolve</td></tr>
+<tr><td>account.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.microsoft.com</td><td>104.127.120.229</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin-portal.office.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.microsoft.com</td><td>13.107.6.156</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.powerplatform.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>ads.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.microsoft.com</td><td>23.100.75.192</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>40.112.72.205</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>40.76.4.15</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>104.215.148.63</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>40.113.200.201</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>13.77.161.179</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.microsoft.com</td><td>152.199.19.160</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.microsoft.com</td><td>13.77.161.179</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>answers.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>api.azurelbs.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>40.126.9.98</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.137.64</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.137.78</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.137.1</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com</td><td>104.121.246.117</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.windows.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>40.112.72.205</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>40.76.4.15</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>104.215.148.63</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>13.77.161.179</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>40.113.200.201</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.microsoft.com</td><td>13.107.42.21</td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azure.bingads.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azure.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>azurelbs.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>b-0004.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bingads-northcentralus.cloudapp.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bingads.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>blogs.technet.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>cdx.transform.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>cmat.tools.cp.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>conformite-logiciels.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td>reverse_resolve</td></tr>
+<tr><td>conformite-logiciels.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td>reverse_resolve</td></tr>
+<tr><td>cs22.wpc.v0cdn.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>devblogs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>developer.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>docs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>dotnet.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>e8819.g.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e9412.b.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>emea.flow.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>expertzone.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>featurecontrol.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>filestore.community.support.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>insights.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>l-0012.l-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lookbook.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>mran.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>mscomajax.vo.msecnd.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>myaccess.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>myaccount.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>myorder.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>myprofile.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>myworkaccount.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>origin.account.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>portal-office365-com.b-0004.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>powerapps.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>powerusers.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>prdf.aadg.msidentity.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rdweb.wvd.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>reroute.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute443.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>royalty.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>servicetrust.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>teams.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>update.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>windowsupdate.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>workshops.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>www.catalog.update.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>www.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>www.msdn.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td>bing_domain_web</td></tr>
+<tr><td>www.tm.f.prd.aadg.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: Bill<br />Mon, Jul 20 2020 21:38:42</p>
+    </div>
+</body>
+</html>
